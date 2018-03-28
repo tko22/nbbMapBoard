@@ -24,9 +24,16 @@ Please Please **PLEASE** read documentation if you dont understand something
 * ```docker-compose.yml``` - config to setup this Flask app and a Database
 * ```postgres-data/``` - Postgres Docker Container data - doesnt exist until you build your docker images and start your containers
 * ```migrations/``` - Holds migration files – doesn't exist until you ```python manage.py db init``` if you decide to not use docker
+## Regular Setup
+If you have Windows, visit [here](./docs/WSL-setup.md) for setup instructions. If you prefer Docker, instructions are provided in the next section. 
 
-## Prereqs
-We will be utilizing Docker to provide the same development environment across your team. This will eliminate aggravating environment troubleshooting in different Operating Systems. We will not be using Docker in production since deployment using Heroku is easier. Check out this <a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">blog post</a> I wrote for more information.
+If you have a Mac, make sure you have homebrew, python3, and pip installed ([instructions](https://github.com/hack4impact-uiuc/wiki/wiki/Mac-Setup)). Then, run this script (you may need to `sudo`):
+```
+$ ./mac_setup.sh
+```
+Visit [here](./docs/regular-setup.md) for step-by-step instructions on how to setup this up if you'd like to understand how to do it. Otherwise, the script works fine. 
+## Docker
+We will be utilizing Docker to provide the same development environment across your team. This will eliminate aggravating environment troubleshooting in different Operating Systems. We will not be using Docker in production since deployment using Heroku is easier. Check out this <a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">blog post</a> I wrote for more information. Note that the Docker configuration files have changed in support for pipenv.
 - [Docker](https://docs.docker.com/engine/installation/#time-based-release-schedule) – if you are running Linux, install the Server version and install [Docker-Compose](https://docs.docker.com/compose/install/#install-compose).
 And that's it! For Mac, you will see a Docker icon on the top bar, indicating that docker is running.
 ## Our Docker Configuration
@@ -54,7 +61,6 @@ Now build the Docker images(the flask app and postgres database) and setup the d
 ```
 $ docker-compose build
 $ docker-compose up -d
-$ docker-compose exec app python manage.py recreate_db
 ```
 Check if your Docker Containers are running:
 ```
