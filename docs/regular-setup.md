@@ -15,7 +15,7 @@ If you have a Mac, run this script and everything should be setup.
 $ ./mac_setup.sh
 ```
 ## Running Development Server
-To run the server, make sure you are in the root directory:
+To run the server, make sure you are in the root directory. Then, startup the virtual environment and run the server:
 ```
 $ pipenv shell  # startup virtual environment
 (flask-boilerplate-_rcP-Rlt) bash-3.2$ python manage.py runserver
@@ -106,5 +106,4 @@ To deactivate when you're using it:
 ```
 (venv)$ deactivate venv
 ```
-Note that the rest of the instructions are written in the context of using Pipenv, not pip. If you are using pip, your command line will have `(venv)$` in front instead of the `(flask......) bash-3.2$`
- 
+If you are using pip, your command line will have `(venv)$` in front instead of the `(flask......) bash-3.2$` Now look above for instructions to run the server.
