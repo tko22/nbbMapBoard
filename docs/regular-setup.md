@@ -5,8 +5,30 @@ This option should be secondary to the <a href='./docs/docker.md'>Docker</a> set
 - pip 9.0
 
 For installations for Mac, [here](https://github.com/hack4impact-uiuc/wiki/wiki/Mac-Setup) are the steps for that.
+
 Note: This doesn't have authentication yet. Coming soon! <br>
-#### If your developing with Windows, ¯\\_(ツ)_/¯ <br> Check out the <a href='./WSL-setup.md'>Windows setup Doc</a>
+#### If your developing with Windows, ¯\\_(ツ)_/¯  Check out the <a href='./WSL-setup.md'>Windows setup Doc</a>
+
+## Mac
+If you have a Mac, run this script and everything should be setup. 
+```
+$ ./mac_setup.sh
+```
+## Running Development Server
+To run the server, make sure you are in the root directory:
+```
+$ pipenv shell  # startup virtual environment
+(flask-boilerplate-_rcP-Rlt) bash-3.2$ python manage.py runserver
+```
+If you are using pipenv, you may also run commands without being inside your virtual environment:
+```
+$ pipenv run python manage.py runserver # pipenv run [command]
+```
+The API should be at http://127.0.0.1:5000/ for you to experience its beauty LOL
+
+## Step-by-Step Instructions
+If you prefer to go through step-by-step instructions to understand what's going on, you're at the right place!
+
 Clone the Repository and cd into it
 ```
 $ git clone https://github.com/tko22/flask-boilerplate.git
@@ -85,13 +107,4 @@ To deactivate when you're using it:
 (venv)$ deactivate venv
 ```
 Note that the rest of the instructions are written in the context of using Pipenv, not pip. If you are using pip, your command line will have `(venv)$` in front instead of the `(flask......) bash-3.2$`
-## Running Development Server
-To run the server, make sure you are in the root directory:
-```
-(flask-boilerplate-_rcP-Rlt) bash-3.2$ python manage.py runserver
-```
-If you are using pipenv, you may also run commands without being inside your virtual environment:
-```
-$ pipenv run python manage.py runserver # pipenv run [command]
-```
-The API should be at http://127.0.0.1:5000/ for you to experience its beauty LOL 
+ 
