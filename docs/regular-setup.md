@@ -39,11 +39,15 @@ To install Postgres with Homebrew([postgresapp](http://postgresapp.com/) also wo
 $ brew install postgresql
 $ brew link postgresql
 ```
-This should start your postgres server(Ctrl-C to stop):
+This should start your postgres server:
 ```
-$ postgres -D /usr/local/var/postgres
+$ brew services start postgresql
 ```
-It should say ```listening on IPv6 address "::1", port 5432``` If not, change the port. On a separate CLI, check whether you can access the database. Your postgres server must be on in-order for this to work:
+To stop:
+```
+$ brew services stop postgresql
+```
+On a separate CLI, check whether you can access the database. Your postgres server must be on in order for this to work:
 ```
 $ createdb
 $ psql -h localhost
