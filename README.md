@@ -31,7 +31,16 @@ If you have a Mac, make sure you have homebrew, python3, and pip installed ([ins
 ```
 $ ./mac_setup.sh
 ```
-Visit [here](./docs/regular-setup.md) for step-by-step instructions on how to setup this up if you'd like to understand how to do it. Otherwise, the script works fine. 
+Visit [here](./docs/regular-setup.md) for step-by-step instructions on how to setup this up if you'd like to understand how to do it. Otherwise, the script works fine. To run the server, make sure you are in the root directory. Then, startup the virtual environment and run the server:
+```
+$ pipenv shell  # startup virtual environment
+(flask-boilerplate-_rcP-Rlt) bash-3.2$ python manage.py runserver
+```
+If you are using pipenv, you may also run commands without being inside your virtual environment like this `pipenv run [command]`:
+```
+$ pipenv run python manage.py runserver
+```
+The API should be at http://127.0.0.1:5000/ for you to experience its beauty
 ## Docker
 We will be utilizing Docker to provide the same development environment across your team. This will eliminate aggravating environment troubleshooting in different Operating Systems. We will not be using Docker in production since deployment using Heroku is easier. Check out this <a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">blog post</a> I wrote for more information. Note that the Docker configuration files have changed in support for pipenv.
 - [Docker](https://docs.docker.com/engine/installation/#time-based-release-schedule) – if you are running Linux, install the Server version and install [Docker-Compose](https://docs.docker.com/compose/install/#install-compose).
@@ -73,6 +82,7 @@ $ docker-compose stop
 ```
 #### Note: A new directory called ```postgres-data``` will be created. **DO NOT DELETE IT!!** It holds all your data in your database.
 ## Running and Stopping Docker Containers - these are the instructions you run after the Setup!
+Please look at our [Docker Documentation](./docs/docker.md) for this boilerplate and the [official documentation](https://docs.docker.com/) for a more comprehensive list. 
 To start your Postgres and your flask api:
 ```
 $ docker-compose start
@@ -93,6 +103,7 @@ $ docker-compose up -d
 #### NOTE: Be careful to not run multiple containers of the same image. Check with ```docker ps``` and use ```docker-compose stop``` to stop all the containers if you are running multiple containers and then restart with ```docker-compose start```. 
 ## MISC
 If you would prefer to setup your application environment instead of using Docker, follow this doc - <a href='./docs/regular-setup.md'>Regular Setup</a>
+
 If you're annoyed by the __pycache__ files 
 ```
 find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
