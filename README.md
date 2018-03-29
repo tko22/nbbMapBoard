@@ -47,7 +47,11 @@ If you are using pipenv, you may also run commands without being inside your vir
 ```
 $ pipenv run python manage.py runserver
 ```
-The API should be at http://127.0.0.1:5000/ for you to experience its beauty
+The API should be at http://127.0.0.1:5000/ for you to experience its beauty. To start and stop postgres:
+```
+$ brew services start postgresql
+$ brew services stop postgresql
+```
 ## Docker Setup
 We will be utilizing Docker to provide the same development environment across your team. This will eliminate aggravating environment troubleshooting in different Operating Systems. I'd recommend that you use regular setup above if you have a Mac due to the script. We will not be using Docker in production since deployment using Heroku is easier. Check out this <a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">blog post</a> I wrote for more information. Note that the Docker configuration files have changed in support for pipenv.
 - [Docker](https://docs.docker.com/engine/installation/#time-based-release-schedule) – if you are running Linux, install the Server version and install [Docker-Compose](https://docs.docker.com/compose/install/#install-compose).
