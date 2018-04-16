@@ -3,6 +3,7 @@ This Boilerplate is meant for building out simple REST APIs deployed using Herok
 
 For development, the default way is to use Docker for ease of setup. However, there is documentation for setup without docker <a href='./docs/regular-setup.md'>here.</a> Setup Instructions will be provided below. I've also written a <a href="https://medium.freecodecamp.org/docker-development-workflow-a-guide-with-flask-and-postgres-db1a1843044a">blog post</a> about using Docker based on this repository.<br> 
 
+![](https://imgur.com/7Bh7mLR.gif)
 ## Docs
 Please Please **PLEASE** read documentation if you dont understand something
 - <a href='./docs/conventions.md'>Conventions + Utility Functions/Classes</a>
